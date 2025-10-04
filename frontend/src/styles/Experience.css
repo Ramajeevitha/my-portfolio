@@ -15,6 +15,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
+  color: black;
 }
 
 #experience h2::after {
