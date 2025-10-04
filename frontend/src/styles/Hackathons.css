@@ -1,4 +1,3 @@
-/* ===== Section Base Styles ===== */
 #hackathons {
   padding: 60px 0;
   text-align: center;
@@ -31,24 +30,8 @@
   overflow-y: hidden;
   width: 100%;
   position: relative;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
 }
 
-#hackathons .scroll-container::-webkit-scrollbar {
-  height: 10px;
-}
-
-#hackathons .scroll-container::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #c569c3, #c406dd);
-  border-radius: 5px;
-}
-
-#hackathons .scroll-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* ===== Auto Scroll Content ===== */
 #hackathons .scroll-content {
   display: flex;
   gap: 30px;
@@ -58,6 +41,7 @@
 #hackathons .scroll-content:hover {
   animation-play-state: paused;
 }
+
 
 /* ===== Individual Hackathon Card ===== */
 #hackathons .image-wrapper {
@@ -81,8 +65,7 @@
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Zoom effect */
-#hackathons .image-wrapper:hover img {
+#hackathons .image-wrapper img:hover {
   transform: scale(1.05);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
 }
@@ -104,14 +87,15 @@
   color: #fff;
   font-size: 1.3rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(2px);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  text-align: center;
+  max-width: 38vw;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.6s ease;
 }
 
-/* Caption stays stable but brightens slightly on hover */
 #hackathons .image-wrapper:hover .caption {
   background: linear-gradient(
     to top,
@@ -132,7 +116,7 @@
   }
 }
 
-/* ===== Responsive Design ===== */
+/* ✅ Responsive Design */
 @media (max-width: 1024px) {
   #hackathons .image-wrapper img {
     width: 60vw;
