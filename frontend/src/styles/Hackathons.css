@@ -1,11 +1,12 @@
+/* ===== Section Base Styles ===== */
 #hackathons {
-  padding: 50px 0;
+  padding: 60px 0;
   text-align: center;
   background: transparent;
 }
 
 #hackathons h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: 700;
   color: #222;
@@ -24,119 +25,142 @@
   border-radius: 2px;
 }
 
-
+/* ===== Scroll Container ===== */
 #hackathons .scroll-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
   position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
+#hackathons .scroll-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+#hackathons .scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  border-radius: 5px;
+}
+
+#hackathons .scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Auto Scroll Content ===== */
 #hackathons .scroll-content {
   display: flex;
-  gap: 25px;
-  animation: scroll-right 30s linear infinite;
+  gap: 30px;
+  animation: scroll-right 25s linear infinite;
 }
-
 
 #hackathons .scroll-content:hover {
   animation-play-state: paused;
 }
 
+/* ===== Individual Hackathon Card ===== */
 #hackathons .image-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  margin: 0 15px;
-  transition: transform 0.3s ease;
+  margin: 0 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
 }
 
 #hackathons .image-wrapper img {
-  width: 40vw;
-  height: 60vh;
+  width: 50vw;
+  height: 70vh;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-#hackathons .image-wrapper img:hover {
+/* Zoom effect */
+#hackathons .image-wrapper:hover img {
   transform: scale(1.05);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
 }
 
+/* ===== Overlay Caption ===== */
 #hackathons .caption {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 15px;
   text-align: center;
-  max-width: 38vw;
-  padding: 10px 16px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #c569c3, #c406dd);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  animation: fadeInUp 0.6s ease;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.2) 80%,
+    transparent
+  );
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
+/* Caption stays stable but brightens slightly on hover */
 #hackathons .image-wrapper:hover .caption {
-  background: linear-gradient(90deg, #d46dd9, #d920ff);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 30%,
+    rgba(0, 0, 0, 0.3) 80%,
+    transparent
+  );
+  color: #ffdcfc;
 }
 
-
+/* ===== Keyframes ===== */
 @keyframes scroll-right {
   from {
+    transform: translateX(-400%);
+  }
+  to {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-300%);
-  }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ✅ Responsive Design */
+/* ===== Responsive Design ===== */
 @media (max-width: 1024px) {
   #hackathons .image-wrapper img {
-    width: 50vw;
-    height: 45vh;
+    width: 60vw;
+    height: 50vh;
   }
   #hackathons .caption {
-    font-size: 1rem;
-    max-width: 60vw;
+    font-size: 1.1rem;
+    padding: 15px 12px;
   }
 }
 
 @media (max-width: 768px) {
   #hackathons .image-wrapper img {
-    width: 65vw;
-    height: 40vh;
+    width: 70vw;
+    height: 45vh;
   }
   #hackathons .caption {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-    max-width: 70vw;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   #hackathons .image-wrapper img {
     width: 85vw;
-    height: 35vh;
+    height: 40vh;
   }
   #hackathons .caption {
-    font-size: 0.85rem;
-    padding: 6px 10px;
-    max-width: 85vw;
+    font-size: 0.9rem;
+    padding: 12px 10px;
   }
 }

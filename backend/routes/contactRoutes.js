@@ -1,9 +1,10 @@
 import express from "express";
-import { saveMessage, getMessages } from "../controllers/contactController.js";
+import { saveMessage, getMessages, deleteMessage } from "../controllers/contactController.js";
 
 const router = express.Router();
 
-router.post("/", saveMessage);  // POST /contact
-router.get("/", getMessages);   // GET /contact (fetch all messages)
+router.post("/", saveMessage);        // POST /contact
+router.get("/", getMessages);         // GET /contact
+router.delete("/:id", deleteMessage); // DELETE /contact/:id
 
 export default router;

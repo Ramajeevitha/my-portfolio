@@ -28,3 +28,20 @@ export const getMessages = async (req, res) => {
     res.status(500).json({ success: false, error: "Server error" });
   }
 };
+
+// Delete message by ID
+export const deleteMessage = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await Contact.findByIdAndDelete(id);
+
+    if (!deleted) {
+      return res.status(404).json({ success: false, error: "Message not found" });
+    }
+
+    res.json({ success: true, message: "Message deleted successfully" });
+  } catch (err) {
+    console.error("Error deleting message:", err);
+    res.status(500).json({ success: false, error: "Server error" });
+  }
+};
