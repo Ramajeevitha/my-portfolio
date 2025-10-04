@@ -1,0 +1,142 @@
+#hackathons {
+  padding: 50px 0;
+  text-align: center;
+  background: transparent;
+}
+
+#hackathons h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+#hackathons h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+#hackathons .scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#hackathons .scroll-content {
+  display: flex;
+  gap: 25px;
+  animation: scroll-right 30s linear infinite;
+}
+
+
+#hackathons .scroll-content:hover {
+  animation-play-state: paused;
+}
+
+#hackathons .image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+#hackathons .image-wrapper img {
+  width: 40vw;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#hackathons .image-wrapper img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+#hackathons .caption {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  max-width: 38vw;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.6s ease;
+}
+
+#hackathons .image-wrapper:hover .caption {
+  background: linear-gradient(90deg, #d46dd9, #d920ff);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  #hackathons .image-wrapper img {
+    width: 50vw;
+    height: 45vh;
+  }
+  #hackathons .caption {
+    font-size: 1rem;
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #hackathons .image-wrapper img {
+    width: 65vw;
+    height: 40vh;
+  }
+  #hackathons .caption {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    max-width: 70vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #hackathons .image-wrapper img {
+    width: 85vw;
+    height: 35vh;
+  }
+  #hackathons .caption {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    max-width: 85vw;
+  }
+}

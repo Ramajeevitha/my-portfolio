@@ -1,0 +1,56 @@
+#about {
+  text-align: center;
+  margin: 2rem;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+#about h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-frame {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-frame:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  #about {
+    margin: 1rem;
+  }
+
+  #about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .about-frame {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

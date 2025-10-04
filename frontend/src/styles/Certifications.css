@@ -1,0 +1,103 @@
+#certifications {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+}
+
+#certifications h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+#certifications h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#certifications h3 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #c91ec0;
+}
+
+#certifications h3 a {
+  color: #6a0dad;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#certifications h3 a:hover {
+  text-decoration: underline;
+}
+
+.certification-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.certification-card {
+  width: 250px;
+  min-height: 160px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card h3 {
+  font-size: 1.3rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.certification-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+
+.certification-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  #certifications h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  #certifications h3 {
+    font-size: 0.9rem;
+  }
+
+  .certification-card {
+    width: 90%;   
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .certification-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .certification-card p {
+    font-size: 0.9rem;
+  }
+}
