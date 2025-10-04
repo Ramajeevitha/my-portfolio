@@ -1,13 +1,17 @@
+
+
 #experience {
   text-align: center;
-  margin: 2rem 0;
+  padding: 60px 0;
+  background: transparent;
+  color: #222;
 }
 
+
 #experience h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
   font-weight: 700;
-  color: #222;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -15,7 +19,7 @@
 
 #experience h2::after {
   content: "";
-  width: 80px;
+  width: 90px;
   height: 4px;
   background: linear-gradient(90deg, #c569c3, #c406dd);
   display: block;
@@ -25,125 +29,145 @@
 
 .experience-timeline {
   position: relative;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  max-width: 1200px;
+  padding-left: 30px;
 }
+
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #c569c3, #c406dd);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
 
 .experience-item {
   position: relative;
-  padding-left: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 50px;
+  padding-left: 40px;
 }
 
 .experience-item::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background-color: #0077b5;
-  z-index: -1;
+  left: 12px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  box-shadow: 0 0 15px rgba(196, 6, 221, 0.5);
 }
+
 
 .experience-content {
-  background-color: whitesmoke;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid transparent;
+  background-clip: padding-box;
   transition: all 0.3s ease;
-  text-align: left;
 }
+
+.experience-item:hover .experience-content {
+  transform: translateY(-6px);
+  border-left: 5px solid #c406dd;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
 
 .experience-item h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #333;
-  margin-bottom: 1rem;
-}
-
-.experience-item p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 .experience-item strong {
-  font-weight: bold;
-  color: #0077b5;
+  color: #c406dd;
+}
+
+.experience-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 
-.experience-item:hover .experience-content {
-  transform: translateX(10px); 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.experience-item {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-
-.experience-item::after {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #0077b5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.experience-item:nth-child(2) {
+  animation-delay: 0.2s;
 }
+.experience-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.experience-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 @media (max-width: 768px) {
   #experience h2 {
     font-size: 1.8rem;
-    margin-bottom: 25px;
   }
 
   .experience-timeline {
-    padding: 1rem;
+    padding-left: 20px;
+  }
+
+  .experience-timeline::before {
+    left: 15px;
   }
 
   .experience-item {
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .experience-item::before {
-    left: 8px;
-  }
-
-  .experience-item::after {
-    left: 2px;
-    width: 10px;
-    height: 10px;
+    padding-left: 35px;
   }
 
   .experience-content {
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 1.2rem;
   }
 
   .experience-item h3 {
-    font-size: 1.3rem;
-  }
-
-  .experience-item p {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 1.2rem;
   }
 }
 
-
 @media (max-width: 480px) {
   .experience-content {
-    padding: 0.8rem;
-  }
-
-  .experience-item h3 {
-    font-size: 1.1rem;
+    padding: 1rem;
   }
 
   .experience-item p {
     font-size: 0.9rem;
+  }
+
+  .experience-item::before {
+    width: 14px;
+    height: 14px;
   }
 }
