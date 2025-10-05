@@ -26,18 +26,29 @@
 .about-frame {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
-  background: whitesmoke;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem 3rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  text-align: left; 
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #333;
 }
 
 .about-frame:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+.about-frame p {
+  margin-bottom: 1.2rem;
+}
+
+.about-frame strong {
+  color: black;
+}
 
 @media (max-width: 768px) {
   #about {
@@ -50,7 +61,7 @@
   }
 
   .about-frame {
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 0.95rem;
   }
 }
