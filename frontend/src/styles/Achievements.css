@@ -16,7 +16,7 @@
 
 #achievements h2::after {
   content: "";
-  width: 80px;
+  width: 90px;
   height: 4px;
   background: linear-gradient(90deg, #c569c3, #c406dd);
   display: block;
