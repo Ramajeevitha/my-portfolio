@@ -1,3 +1,4 @@
+/* 🌟 Contact Section Styling */
 #contact {
   padding: 60px 20px;
   background: transparent;
@@ -30,19 +31,20 @@
   margin-bottom: 25px;
 }
 
-/* Glassmorphism card style */
+/* 💎 Glassmorphism Contact Card */
 form {
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   text-align: left;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .form-group {
@@ -82,6 +84,7 @@ form {
   outline: none;
 }
 
+/* 🌈 Send Button */
 .submit-btn {
   background: linear-gradient(90deg, #c569c3, #c406dd);
   color: #fff;
@@ -106,26 +109,27 @@ form {
   color: black;
 }
 
-/* 🔹 Mobile view fixes */
+/* 🔹 Tablet & Mobile (<= 768px) */
 @media (max-width: 768px) {
   #contact {
-    padding: 40px 10px;
+    padding: 40px 15px;
   }
 
   #contact h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.9rem;
+    margin-bottom: 25px;
   }
 
   #contact p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
   }
 
   form {
-    width: 90%;
-    padding: 20px;
-    border-radius: 12px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 22px;
+    border-radius: 14px;
   }
 
   .form-group label {
@@ -144,11 +148,15 @@ form {
   }
 }
 
-/* 🔹 Extra small devices (like 400px and below) */
-@media (max-width: 400px) {
+/* 🔹 Extra Small Devices (<= 480px) */
+@media (max-width: 480px) {
+  #contact {
+    padding: 30px 10px;
+  }
+
   form {
-    width: 95%;
-    padding: 15px;
+    width: 94%;
+    padding: 18px;
   }
 
   #contact h2 {
@@ -162,6 +170,32 @@ form {
 
   .submit-btn {
     font-size: 0.85rem;
+    padding: 9px;
+  }
+}
+
+/* 🔹 Ultra Small Devices (<= 380px) */
+@media (max-width: 380px) {
+  form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    font-size: 0.8rem;
     padding: 8px;
   }
 }
