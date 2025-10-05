@@ -1,8 +1,11 @@
-/* 🌟 Contact Section Styling */
+/* 🌟 Contact Section */
 #contact {
   padding: 60px 20px;
   background: transparent;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact h2 {
@@ -31,8 +34,9 @@
   margin-bottom: 25px;
 }
 
-/* 💎 Glassmorphism Contact Card */
+/* 💎 Glassmorphism Card */
 form {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
@@ -44,6 +48,11 @@ form {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   text-align: left;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* 🔹 Prevent button/checkbox overflow */
+form * {
   box-sizing: border-box;
 }
 
@@ -84,7 +93,7 @@ form {
   outline: none;
 }
 
-/* 🌈 Send Button */
+/* 🌈 Submit Button */
 .submit-btn {
   background: linear-gradient(90deg, #c569c3, #c406dd);
   color: #fff;
@@ -109,7 +118,7 @@ form {
   color: black;
 }
 
-/* 🔹 Tablet & Mobile (<= 768px) */
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
   #contact {
     padding: 40px 15px;
@@ -127,9 +136,9 @@ form {
 
   form {
     width: 92%;
-    margin: 0 auto;
     padding: 22px;
     border-radius: 14px;
+    margin: 0 auto;
   }
 
   .form-group label {
@@ -148,7 +157,6 @@ form {
   }
 }
 
-/* 🔹 Extra Small Devices (<= 480px) */
 @media (max-width: 480px) {
   #contact {
     padding: 30px 10px;
@@ -157,6 +165,7 @@ form {
   form {
     width: 94%;
     padding: 18px;
+    margin: 0 auto;
   }
 
   #contact h2 {
@@ -174,7 +183,6 @@ form {
   }
 }
 
-/* 🔹 Ultra Small Devices (<= 380px) */
 @media (max-width: 380px) {
   form {
     width: 95%;
