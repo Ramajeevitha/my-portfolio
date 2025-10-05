@@ -1,42 +1,122 @@
+/* 🌐 Import Modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700;800&display=swap');
 
-body {
+/* ===== GLOBAL RESET ===== */
+* {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: black; 
-  background: transparent; 
+  box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
+body {
+  font-family: "Inter", sans-serif;
+  color: #222;
+  background: #f9f8ff;
+  line-height: 1.7;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
+/* ===== MAIN CONTAINER ===== */
 .app-container {
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,245,255,0.95));
+  backdrop-filter: blur(10px);
+  padding: 0 40px;
 }
 
-
+/* ===== HEADINGS ===== */
 h1, h2, h3 {
-  color: #fff;
-  margin: 0;
-  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
 
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* ===== LINKS ===== */
 a {
-  color: #ffcc00;
+  color: #c406dd;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #a000c8;
+  text-shadow: 0 0 10px rgba(196, 6, 221, 0.3);
 }
 
+/* ===== GLOBAL SPACING FOR SECTIONS ===== */
+section {
+  padding: 60px 0;
+}
 
+section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  letter-spacing: 2px;
+}
 
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
 
+/* ===== TEXT ELEMENTS ===== */
+p {
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== BUTTON STYLE ===== */
+button, .submit-btn {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(196, 6, 221, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 0.95rem;
   }
 
   h1 {
@@ -48,23 +128,25 @@ a:hover {
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .app-container {
-    padding: 0 15px;
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 40px 0;
   }
 }
 
-
 @media (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 
   h1 {
-    font-size: 1.6rem;
-    line-height: 1.2;
+    font-size: 1.7rem;
   }
 
   h2 {
@@ -72,10 +154,14 @@ a:hover {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .app-container {
     padding: 0 10px;
+  }
+
+  section {
+    padding: 30px 0;
   }
 }
