@@ -25,7 +25,7 @@
   border-radius: 2px;
 }
 
-/* Timeline container */
+
 .experience-timeline {
   position: relative;
   max-width: 900px;
@@ -33,7 +33,7 @@
   padding-left: 30px;
 }
 
-/* Vertical line */
+
 .experience-timeline::before {
   content: "";
   position: absolute;
@@ -46,7 +46,7 @@
   opacity: 0.7;
 }
 
-/* Each timeline block */
+
 .experience-item {
   position: relative;
   margin-bottom: 50px;
@@ -102,7 +102,7 @@
   line-height: 1.6;
 }
 
-/* Fade-up animation */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -114,9 +114,7 @@
   }
 }
 
-/* === Responsive Design === */
 
-/* Tablet view */
 @media (max-width: 768px) {
   #experience {
     padding: 40px 0;
@@ -163,7 +161,7 @@
   }
 }
 
-/* Mobile view */
+
 @media (max-width: 480px) {
   #experience h2 {
     font-size: 1.6rem;
@@ -174,7 +172,7 @@
   }
 
   .experience-timeline::before {
-    display: none; /* hide vertical line on mobile for cleaner look */
+    display: none; 
   }
 
   .experience-item {
@@ -188,7 +186,7 @@
   }
 
   .experience-item::before {
-    display: none; /* remove dots on mobile */
+    display: none; 
   }
 
   .experience-item h3 {

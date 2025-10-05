@@ -1,4 +1,4 @@
-/* 🌟 Contact Section */
+
 #contact {
   padding: 60px 20px;
   background: transparent;
@@ -34,7 +34,7 @@
   margin-bottom: 25px;
 }
 
-/* 💎 Glassmorphism Card */
+
 form {
   width: 100%;
   max-width: 500px;
@@ -51,7 +51,7 @@ form {
   box-sizing: border-box;
 }
 
-/* 🔹 Prevent button/checkbox overflow */
+
 form * {
   box-sizing: border-box;
 }
@@ -93,7 +93,7 @@ form * {
   outline: none;
 }
 
-/* 🌈 Submit Button */
+
 .submit-btn {
   background: linear-gradient(90deg, #c569c3, #c406dd);
   color: #fff;
@@ -118,7 +118,7 @@ form * {
   color: black;
 }
 
-/* 📱 Responsive Design */
+
 @media (max-width: 768px) {
   #contact {
     padding: 40px 15px;

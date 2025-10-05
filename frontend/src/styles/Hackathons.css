@@ -24,7 +24,7 @@
   border-radius: 2px;
 }
 
-/* ===== Scroll Container ===== */
+
 #hackathons .scroll-container {
   overflow-x: auto;
   overflow-y: hidden;
@@ -102,7 +102,7 @@
 
 
 
-/* ===== Keyframes ===== */
+
 @keyframes scroll-right {
   from {
     transform: translateX(-400%);
@@ -112,7 +112,7 @@
   }
 }
 
-/* ✅ Responsive Design */
+
 @media (max-width: 1024px) {
   #hackathons .image-wrapper img {
     width: 60vw;

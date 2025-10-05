@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className="navbar">
-        {/* Logo + Text */}
+        {}
         <a href="#home" className="logo" role="banner" aria-label="Logo of Rama Jeevitha">
           <img 
             src={logo} 
