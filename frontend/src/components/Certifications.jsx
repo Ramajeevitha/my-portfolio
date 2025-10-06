@@ -28,8 +28,8 @@ const Certifications = () => {
       desc: "TCS iON Career Edge- Young Professionals",
     },
     {
-      title: "Cybernaut",
-      desc: "Cybernaut's UX/UI Course on Figma, Adobe Illustrator",
+      title: "GUVI - UX/UI",
+      desc: "Guvi's UX/UI Course",
     },
   ];
 
