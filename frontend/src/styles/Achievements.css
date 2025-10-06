@@ -1,12 +1,14 @@
+/* 🎯 Achievements Section */
 #achievements {
   padding: 60px 0;
   text-align: center;
   background: transparent;
+  overflow: hidden; /* Prevent overflow glitches */
 }
 
 #achievements h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2.2rem;
+  margin-bottom: 45px;
   font-weight: 700;
   color: #222;
   text-transform: uppercase;
@@ -16,64 +18,46 @@
 
 #achievements h2::after {
   content: "";
-  width: 60px;
+  width: 70px;
   height: 4px;
   background: linear-gradient(90deg, #c569c3, #c406dd);
   display: block;
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   border-radius: 2px;
 }
 
-
+/* 🌈 Scrollable Carousel */
 .scroll-container {
-  overflow-x: auto;
+  overflow-x: hidden; /* Hide scrollbar, smooth auto-scroll */
   overflow-y: hidden;
   width: 100%;
   position: relative;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
 }
-
-.scroll-container::-webkit-scrollbar {
-  height: 10px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #c569c3, #c406dd);
-  border-radius: 5px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
 
 .scroll-content {
   display: flex;
-  gap: 30px;
-  animation: scroll-left 25s linear infinite;
+  gap: 40px;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+  will-change: transform;
 }
 
 .scroll-content:hover {
-  animation-play-state: paused;
+  animation-play-state: paused; /* Pause scroll on hover */
 }
 
-
+/* 🖼️ Image Cards */
 .image-wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-shrink: 0;
-  margin: 0 20px;
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
 
 .image-wrapper img {
-  width: 50vw;
-  height: 70vh;
+  width: 45vw;
+  height: 65vh;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
@@ -85,13 +69,13 @@
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
 }
 
-
+/* 📝 Caption Overlay */
 .caption {
   position: absolute;
-  bottom: 15px;
+  bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 85%;
   padding: 15px 18px;
   text-align: center;
   color: #fff;
@@ -99,7 +83,7 @@
   font-weight: 600;
   line-height: 1.4;
   border-radius: 12px;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
   letter-spacing: 0.5px;
@@ -109,22 +93,21 @@
 
 .image-wrapper:hover .caption {
   background: rgba(196, 6, 221, 0.85);
-  color: #fff;
-  transform: translateX(-50%) translateY(-4px);
+  transform: translateX(-50%) translateY(-5px);
   box-shadow: 0 10px 25px rgba(196, 6, 221, 0.5);
 }
 
-
+/* ✨ Smooth Infinite Scroll Animation */
 @keyframes scroll-left {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-300%); 
+    transform: translateX(-50%);
   }
 }
 
-
+/* Fade-in Caption Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -136,7 +119,7 @@
   }
 }
 
-
+/* 💻 Responsive Design */
 @media (max-width: 1024px) {
   .image-wrapper img {
     width: 60vw;
@@ -144,11 +127,14 @@
   }
   .caption {
     font-size: 1.1rem;
-    padding: 15px 12px;
   }
 }
 
 @media (max-width: 768px) {
+  .scroll-content {
+    gap: 25px;
+    animation: scroll-left 35s linear infinite;
+  }
   .image-wrapper img {
     width: 70vw;
     height: 45vh;
@@ -159,12 +145,18 @@
 }
 
 @media (max-width: 480px) {
+  #achievements {
+    padding: 40px 0;
+  }
+  #achievements h2 {
+    font-size: 1.6rem;
+  }
   .image-wrapper img {
     width: 85vw;
-    height: 40vh;
+    height: 42vh;
   }
   .caption {
     font-size: 0.9rem;
-    padding: 12px 10px;
+    padding: 10px 12px;
   }
 }
