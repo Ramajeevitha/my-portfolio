@@ -3,9 +3,20 @@
   padding: 60px 0;
   text-align: center;
   background: transparent;
-  overflow: hidden; /* Prevent scroll jump */
+  overflow: hidden;
+  position: relative;
 }
 
+/* Optional Gradient Background – makes section pop */
+#hackathons::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 215, 255, 0.25), rgba(230, 220, 255, 0.3));
+  z-index: 0;
+}
+
+/* 🏷️ Title Styling */
 #hackathons h2 {
   font-size: 2.2rem;
   margin-bottom: 45px;
@@ -14,6 +25,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
+  z-index: 1;
 }
 
 #hackathons h2::after {
@@ -32,13 +44,14 @@
   overflow-y: hidden;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
 #hackathons .scroll-content {
   display: flex;
   gap: 40px;
   width: max-content;
-  animation: scroll-right 40s linear infinite;
+  animation: scroll-right 45s linear infinite;
   will-change: transform;
 }
 
@@ -52,7 +65,7 @@
   flex-shrink: 0;
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 1s ease;
 }
 
 #hackathons .image-wrapper img {
@@ -78,7 +91,7 @@
   width: 85%;
   padding: 15px 18px;
   text-align: center;
-  color: #fff;
+  color: transparent;
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
@@ -107,7 +120,7 @@
   }
 }
 
-/* ✨ Caption Fade */
+/* ✨ Caption Fade Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;

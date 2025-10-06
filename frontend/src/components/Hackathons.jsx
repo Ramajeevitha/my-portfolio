@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../styles/Hackathons.css";
 
 import qcfiImg from "./../assets/qcfi.png";
@@ -10,6 +12,11 @@ import msmeImg from "./../assets/msme.jpeg";
 import libImg from "./../assets/lib.jpeg";
 
 function Hackathons() {
+  // 🎞️ Initialize scroll animations
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, offset: 80 });
+  }, []);
+
   const hackathons = [
     { img: qcfiImg, caption: "📢 Organizing Quality Circle Week" },
     { img: w1Img, caption: "🎓 Workshop for Polytechnic Students Day 1" },
@@ -21,20 +28,20 @@ function Hackathons() {
   ];
 
   return (
-    <section id="hackathons">
-      <h2>Endeavours🌍</h2>
+    <section id="hackathons" data-aos="fade-up">
+      <h2 data-aos="zoom-in">Endeavours 🌍</h2>
       <div className="scroll-container">
         <div className="scroll-content">
           {hackathons.map((item, index) => (
-            <div className="image-wrapper" key={index}>
+            <div className="image-wrapper" data-aos="fade-up" key={index}>
               <img src={item.img} alt={item.caption} />
               <p className="caption">{item.caption}</p>
             </div>
           ))}
 
-          
+          {/* 🔁 Duplicate for infinite scrolling */}
           {hackathons.map((item, index) => (
-            <div className="image-wrapper" key={`dup-${index}`}>
+            <div className="image-wrapper" data-aos="fade-up" key={`dup-${index}`}>
               <img src={item.img} alt={item.caption} />
               <p className="caption">{item.caption}</p>
             </div>
