@@ -22,7 +22,7 @@ function Hackathons() {
 
   return (
     <section id="hackathons">
-      <h2>🛠️ Workshops, 🌍 Awareness & 💡 Hackathons</h2>
+      <h2>Endeavours🌍</h2>
       <div className="scroll-container">
         <div className="scroll-content">
           {hackathons.map((item, index) => (
