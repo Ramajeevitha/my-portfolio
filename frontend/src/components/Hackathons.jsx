@@ -12,9 +12,8 @@ import msmeImg from "./../assets/msme.jpeg";
 import libImg from "./../assets/lib.jpeg";
 
 function Hackathons() {
-  // 🎞️ Initialize scroll animations
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true, offset: 80 });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   const hackathons = [
@@ -28,20 +27,21 @@ function Hackathons() {
   ];
 
   return (
-    <section id="hackathons" data-aos="fade-up">
+    <section id="hackathons" data-aos="fade-in">
       <h2 data-aos="zoom-in">Endeavours 🌍</h2>
+
       <div className="scroll-container">
-        <div className="scroll-content">
+        <div className="scroll-content" data-aos="fade-up">
           {hackathons.map((item, index) => (
-            <div className="image-wrapper" data-aos="fade-up" key={index}>
+            <div className="image-wrapper" key={index}>
               <img src={item.img} alt={item.caption} />
               <p className="caption">{item.caption}</p>
             </div>
           ))}
 
-          {/* 🔁 Duplicate for infinite scrolling */}
+          {/* Duplicate for infinite scroll */}
           {hackathons.map((item, index) => (
-            <div className="image-wrapper" data-aos="fade-up" key={`dup-${index}`}>
+            <div className="image-wrapper" key={`dup-${index}`}>
               <img src={item.img} alt={item.caption} />
               <p className="caption">{item.caption}</p>
             </div>

@@ -1,22 +1,11 @@
-/* 💡 Hackathons Section */
+/* 🌍 Endeavours (Hackathons) Section */
 #hackathons {
   padding: 60px 0;
   text-align: center;
   background: transparent;
   overflow: hidden;
-  position: relative;
 }
 
-/* Optional Gradient Background – makes section pop */
-#hackathons::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 215, 255, 0.25), rgba(230, 220, 255, 0.3));
-  z-index: 0;
-}
-
-/* 🏷️ Title Styling */
 #hackathons h2 {
   font-size: 2.2rem;
   margin-bottom: 45px;
@@ -25,12 +14,11 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
-  z-index: 1;
 }
 
 #hackathons h2::after {
   content: "";
-  width: 80px;
+  width: 70px;
   height: 4px;
   background: linear-gradient(90deg, #c569c3, #c406dd);
   display: block;
@@ -38,29 +26,28 @@
   border-radius: 2px;
 }
 
-/* 🌈 Smooth Scrolling Container */
-#hackathons .scroll-container {
+/* 🌈 Scrollable Carousel */
+.scroll-container {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
   position: relative;
-  z-index: 1;
 }
 
-#hackathons .scroll-content {
+.scroll-content {
   display: flex;
   gap: 40px;
   width: max-content;
-  animation: scroll-right 45s linear infinite;
+  animation: scroll-left 40s linear infinite;
   will-change: transform;
 }
 
-#hackathons .scroll-content:hover {
+.scroll-content:hover {
   animation-play-state: paused;
 }
 
-/* 🎟️ Hackathon Card */
-#hackathons .image-wrapper {
+/* 🖼️ Image Cards */
+.image-wrapper {
   position: relative;
   flex-shrink: 0;
   border-radius: 20px;
@@ -68,92 +55,83 @@
   transition: transform 0.4s ease, opacity 1s ease;
 }
 
-#hackathons .image-wrapper img {
+.image-wrapper img {
   width: 45vw;
   height: 65vh;
   object-fit: cover;
   border-radius: 20px;
+  display: block;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-#hackathons .image-wrapper img:hover {
+.image-wrapper img:hover {
   transform: scale(1.05);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* 📝 Caption Overlay */
-#hackathons .caption {
+/* 📝 Caption Overlay (Full-width bottom bar, no bottom gap) */
+.caption {
   position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  padding: 15px 18px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 20px;
   text-align: center;
-  color: transparent;
-  font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.4;
-  border-radius: 12px;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
   letter-spacing: 0.5px;
-  animation: fadeInUp 0.6s ease;
+  border-radius: 0 0 20px 20px; /* only bottom corners rounded */
+  transform: translateY(0);
+  margin: 0; /* removes any spacing */
+  box-sizing: border-box;
   transition: all 0.4s ease;
 }
 
-#hackathons .image-wrapper:hover .caption {
+/* 🌟 Hover effect for caption */
+.image-wrapper:hover .caption {
   background: rgba(196, 6, 221, 0.85);
-  transform: translateX(-50%) translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(196, 6, 221, 0.5);
 }
 
-/* ⚙️ Rightward Infinite Scroll Animation */
-@keyframes scroll-right {
+/* ✨ Infinite Scroll Animation */
+@keyframes scroll-left {
   from {
-    transform: translateX(-50%);
-  }
-  to {
     transform: translateX(0);
   }
-}
-
-/* ✨ Caption Fade Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%);
   }
 }
 
 /* 💻 Responsive Design */
 @media (max-width: 1024px) {
-  #hackathons .image-wrapper img {
+  .image-wrapper img {
     width: 60vw;
     height: 50vh;
   }
-  #hackathons .caption {
-    font-size: 1.1rem;
+  .caption {
+    font-size: 1rem;
+    padding: 12px 16px;
   }
 }
 
 @media (max-width: 768px) {
-  #hackathons .scroll-content {
+  .scroll-content {
     gap: 25px;
-    animation: scroll-right 35s linear infinite;
+    animation: scroll-left 35s linear infinite;
   }
-  #hackathons .image-wrapper img {
+  .image-wrapper img {
     width: 70vw;
     height: 45vh;
   }
-  #hackathons .caption {
-    font-size: 1rem;
+  .caption {
+    font-size: 0.95rem;
   }
 }
 
@@ -164,11 +142,11 @@
   #hackathons h2 {
     font-size: 1.6rem;
   }
-  #hackathons .image-wrapper img {
+  .image-wrapper img {
     width: 85vw;
     height: 42vh;
   }
-  #hackathons .caption {
+  .caption {
     font-size: 0.9rem;
     padding: 10px 12px;
   }
