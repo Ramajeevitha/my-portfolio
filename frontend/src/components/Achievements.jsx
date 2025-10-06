@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/Achievements.css";
 
-// Import assets
+
 import woodImg from "./../assets/wood.jpeg";
 import goldImg from "./../assets/gold.jpeg";
 import besttImg from "./../assets/bestt.jpeg";

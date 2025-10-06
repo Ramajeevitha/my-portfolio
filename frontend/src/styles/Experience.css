@@ -117,7 +117,7 @@
 
 @media (max-width: 768px) {
   #experience {
-    padding: 40px 20px; /* ✅ adds space on both sides */
+    padding: 40px 20px; 
   }
 
   #experience h2 {
@@ -127,15 +127,15 @@
 
   .experience-timeline {
     position: relative;
-    padding-left: 30px; /* ✅ moved inward for visual balance */
+    padding-left: 30px; 
   }
 
   .experience-timeline::before {
-    left: 20px; /* ✅ moved vertical line slightly inward */
+    left: 20px; 
   }
 
   .experience-item {
-    padding-left: 45px; /* ✅ maintains spacing from the new line */
+    padding-left: 45px; 
     margin-bottom: 40px;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .experience-item::before {
-    left: 10px; /* aligns dot with the new line position */
+    left: 10px; 
     top: -12px;
     width: 14px;
     height: 14px;
@@ -165,7 +165,7 @@
 
 @media (max-width: 480px) {
   #experience {
-    padding: 40px 25px; /* ✅ extra padding for very small screens */
+    padding: 40px 25px; 
   }
 
   #experience h2 {
@@ -173,15 +173,15 @@
   }
 
   .experience-timeline {
-    padding-left: 15px; /* ✅ slightly inward alignment */
+    padding-left: 15px; 
   }
 
   .experience-timeline::before {
-    left: 10px; /* ✅ shifted inward for perfect alignment */
+    left: 10px; 
   }
 
   .experience-item {
-    padding-left: 30px; /* ✅ content aligned properly */
+    padding-left: 30px; 
   }
 
   .experience-content {
@@ -191,7 +191,7 @@
   }
 
   .experience-item::before {
-    left: 2px; /* ✅ dot now lines up correctly */
+    left: 2px; 
     top: -10px;
     width: 14px;
     height: 14px;

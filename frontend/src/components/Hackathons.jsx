@@ -39,7 +39,7 @@ function Hackathons() {
             </div>
           ))}
 
-          {/* Duplicate for infinite scroll */}
+          {}
           {hackathons.map((item, index) => (
             <div className="image-wrapper" key={`dup-${index}`}>
               <img src={item.img} alt={item.caption} />
