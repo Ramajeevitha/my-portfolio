@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/Achievements.css";
 
-
 import woodImg from "./../assets/wood.jpeg";
 import goldImg from "./../assets/gold.jpeg";
 import besttImg from "./../assets/bestt.jpeg";
@@ -13,6 +12,7 @@ import bestImg from "./../assets/best.jpeg";
 import danceImg from "./../assets/dance.jpeg";
 import konguImg from "./../assets/kongu.png";
 import journalImg from "./../assets/journal.png";
+import dheeImg from "./../assets/dhee.jpg"; 
 
 function Achievements() {
   useEffect(() => {
@@ -25,6 +25,7 @@ function Achievements() {
     { img: goldImg, text: "🏆 Gold Award - QCFI Chennai Chapter 2024" },
     { img: tcsImg, text: "🏅 Scored Good Marks in TCS NQT 2025" },
     { img: sooriImg, text: "✨ Created a memento for Actor Soori" },
+    { img: dheeImg, text: "💼 Secured 6-Month Internship at Dhee Coding Lab, Bangalore" }, 
     { img: bestImg, text: "🏅 Best Presentation Award - Symposium" },
     { img: danceImg, text: "🏅 Secured 2nd Prize Tri-Fest 2025 (Dance)" },
     { img: konguImg, text: "🥇 First Prize - National Level Technical Symposium" },
