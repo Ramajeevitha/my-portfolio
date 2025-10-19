@@ -21,9 +21,9 @@ function Hackathons() {
     { img: w1Img, caption: "🎓 Workshop for Polytechnic Students Day 1" },
     { img: w2Img, caption: "🎓 Workshop for Polytechnic Students Day 2" },
     { img: tnImg, caption: "🚀 Attended TNWISE Hackathon 2025 (E-Vehicles)" },
-    { img: virkshaImg, caption: "🎓 Workshop for Virksha School (2 Days)" },
+    { img: virkshaImg, caption: "🎓 Conducted Workshop for Virksha School (2 Days)" },
     { img: msmeImg, caption: "💡 Presentation at MSME Hackathon 2025" },
-    { img: libImg, caption: "📚 Awareness: Poor Utilization of Library" },
+    { img: libImg, caption: "📚 Awareness: Poor Utilization of Library(QCFI)" },
   ];
 
   return (

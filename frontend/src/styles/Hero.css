@@ -53,6 +53,24 @@
   color: #444;
   margin-bottom: 10px;
 }
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #c569c3, #c406dd);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(196, 6, 221, 0.3);
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #d46dd9, #d920ff);
+  box-shadow: 0 8px 20px rgba(196, 6, 221, 0.4);
+}
 
 
 @media (max-width: 992px) {

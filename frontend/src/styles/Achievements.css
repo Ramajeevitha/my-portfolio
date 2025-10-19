@@ -1,8 +1,6 @@
-
 html {
   scroll-behavior: smooth;
 }
-
 
 #achievements {
   padding: 60px 0;
@@ -31,7 +29,6 @@ html {
   border-radius: 2px;
 }
 
-
 .scroll-container {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -43,14 +40,13 @@ html {
   display: flex;
   gap: 40px;
   width: max-content;
-  animation: scroll-left 40s linear infinite;
+  animation: scroll-right 40s linear infinite; /* 👈 changed to right */
   will-change: transform;
 }
 
 .scroll-content:hover {
   animation-play-state: paused;
 }
-
 
 .image-wrapper {
   position: relative;
@@ -73,7 +69,6 @@ html {
   transform: scale(1.05);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
 }
-
 
 .caption {
   position: absolute;
@@ -101,17 +96,17 @@ html {
   box-shadow: 0 10px 25px rgba(196, 6, 221, 0.5);
 }
 
-
-@keyframes scroll-left {
+/* 👇 Direction changed */
+@keyframes scroll-right {
   from {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
-
+/* Responsive */
 @media (max-width: 1024px) {
   .image-wrapper img {
     width: 60vw;
@@ -125,7 +120,7 @@ html {
 @media (max-width: 768px) {
   .scroll-content {
     gap: 25px;
-    animation: scroll-left 35s linear infinite;
+    animation: scroll-right 35s linear infinite;
   }
   .image-wrapper img {
     width: 70vw;
