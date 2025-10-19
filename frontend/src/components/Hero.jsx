@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/Hero.css";
 import profilePic from "../assets/JEEVITHA.png";
-import resume from "../assets/resume.pdf"; 
+import resume from "../assets/resume.pdf";
+
 
 const Hero = () => {
   return (
@@ -20,10 +21,11 @@ const Hero = () => {
           experiences and innovative web solutions.
         </p>
 
-      
         <a href={resume} download="Rama_Jeevitha_Resume.pdf" className="resume-btn">
           Download Resume
         </a>
+
+      
       </div>
     </section>
   );
