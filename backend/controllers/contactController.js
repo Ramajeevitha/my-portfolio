@@ -1,6 +1,6 @@
 import Contact from "../models/Contact.js";
 
-// Save message
+
 export const saveMessage = async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -18,7 +18,7 @@ export const saveMessage = async (req, res) => {
   }
 };
 
-// Fetch all messages (for admin)
+
 export const getMessages = async (req, res) => {
   try {
     const messages = await Contact.find().sort({ date: -1 });
@@ -29,7 +29,7 @@ export const getMessages = async (req, res) => {
   }
 };
 
-// Delete message by ID
+
 export const deleteMessage = async (req, res) => {
   try {
     const { id } = req.params;

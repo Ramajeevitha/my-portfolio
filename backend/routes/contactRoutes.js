@@ -3,8 +3,8 @@ import { saveMessage, getMessages, deleteMessage } from "../controllers/contactC
 
 const router = express.Router();
 
-router.post("/", saveMessage);        // POST /contact
-router.get("/", getMessages);         // GET /contact
-router.delete("/:id", deleteMessage); // DELETE /contact/:id
+router.post("/", saveMessage);        
+router.get("/", getMessages);         
+router.delete("/:id", deleteMessage); 
 
 export default router;

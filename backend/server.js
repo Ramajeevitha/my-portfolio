@@ -18,14 +18,8 @@ app.use(
 );
 
 app.use(express.json());
-
-// Routes
 app.use("/contact", contactRoutes);
-
-// Test route
-app.get("/", (req, res) => res.send("🚀 Backend API running successfully!"));
-
-// Start server
+app.get("/", (req, res) => res.send(" Backend API running successfully!"));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
   console.log(`✅ Server running on port ${PORT}`)
