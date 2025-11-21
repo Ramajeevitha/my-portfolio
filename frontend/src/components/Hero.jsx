@@ -17,7 +17,7 @@ const Hero = () => {
           Crafting intuitive designs, coding seamless solutions
         </p>
         <p className="intro">
-          A Full Stack Developer & UX/UI Designer, building seamless digital
+          A MERN & PERN Stack Developer & UX/UI Designer, building seamless digital
           experiences and innovative web solutions.
         </p>
 

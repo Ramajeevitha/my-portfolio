@@ -157,3 +157,20 @@
     font-size: 0.85rem;
   }
 }
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.project-card h3,
+.project-card p {
+  color: inherit;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
