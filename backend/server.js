@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://my-portfolio-eight-navy-35.vercel.app",
+    origin: "https://ramajeevitha-portfolio.vercel.app/",
     methods: ["GET", "POST", "DELETE"],
   })
 );
